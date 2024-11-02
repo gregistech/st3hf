@@ -1,0 +1,101 @@
+
+\newcommand{\sepline}{%
+	\begin{center}
+	    \rule{\linewidth}{0.4pt}
+	\end{center}
+}
+
+\section{Csomóponti módszer}
+
+% A
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = A_x + N_2 + {N_1}_x\\
+	&\sum{\vec{F}_y} := 0 = A_y - {N_1}_y
+\end{align*}
+
+\begin{center}
+	$\tan \alpha = \frac{c}{a} \Rightarrow \alpha = \pnum{\alfa}$\textdegree
+\end{center}
+\begin{align*}
+	&{N_1}_y = A_y = \pnum{\Nay} \\
+	&\mathbf{N_1} = \frac{{N_1}_y}{\sin \alpha} = \mathbf{\pnum{\Na}} \\
+	&{N_1}_x = N_1 \times \cos \alpha = \pnum{\Nax}
+\end{align*}
+
+\sepline
+
+% B
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = B_x - N_8 \\
+	&\sum{\vec{F}_y} := 0 = B_y + N_{10}
+\end{align*}
+\begin{align*}
+	\mathbf{N_8} &= B_x = \mathbf{\pnum{\Nh}} \\
+	\mathbf{N_{10}} &= -B_y = \mathbf{\pnum{\Nj}}
+\end{align*}
+
+\sepline
+
+% C
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = N_8 - N_6 + {N_9}_x - {N_5}_x \\
+	&\sum{\vec{F}_y} := 0 = N_7 + {N_5}_y + {N_9}_y 
+\end{align*}
+\begin{align*}
+	&\mathbf{N_6} = N_8 + {N_9}_x - {N_5}_x = \mathbf{\pnum{\Nf}} \\
+	&\mathbf{N_7} = -{N_5}_y - {N_9}_y = \mathbf{\pnum{\Ng}}
+\end{align*}
+
+\sepline
+
+% D
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = N_4 - N_2 + {N_5}_x \\
+	&\sum{\vec{F}_y} := 0 = -N_3 - {N_5}_y 
+\end{align*}
+\begin{align*}
+	{N_5}_x &= N_2 - N_4 = \mathbf{\pnum{\Nex}} \\
+	{N_5}_y &= -N_3 = \mathbf{\pnum{\Ney}} \\
+	\mathbf{N_5} &= \sqrt{{{N_5}_x}^2 + {{N_5}_y}^2} = \mathbf{\pnum{\Ne}} \\
+\end{align*}
+
+\sepline
+
+% E
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = N_6 - {N_1}_x \\
+	&\sum{\vec{F}_y} := 0 = N_3 - F_1 + {N_1}_y
+\end{align*}
+\begin{align*}
+	&N_6 = {N_1}_x = \pnum{\Nf} \checkmark \\
+	&\mathbf{N_3} = F_1 - {N_1}_y = \mathbf{\pnum{\Nc}} \\
+\end{align*}
+
+\sepline
+
+% F
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = F_3 - N_4 \\
+	&\sum{\vec{F}_y} := 0 = -N_7
+\end{align*}
+\begin{align*}
+	&\mathbf{N_4} = F_3 = \mathbf{\pnum{\Nd}} \\
+	&N_7 = \pnum{\Ng} \checkmark \\
+\end{align*}
+
+\sepline
+
+% G
+\begin{align*}
+	&\sum{\vec{F}_x} := 0 = -F_2 - {N_9}_x \\
+	&\sum{\vec{F}_y} := 0 = -N_{10} - {N_9}_y 
+\end{align*}
+\begin{center}
+	$\tan \beta = \frac{b}{c} \Rightarrow \beta = \pnum{\Beta}$\textdegree
+\end{center}
+\begin{align*}
+	{N_9}_x &= -F_2 = \mathbf{\pnum{\Nix}} \\
+	\mathbf{N_9} &= \frac{{N_9}_x}{\sin\beta} = \mathbf{\pnum{\Ni}} \\
+	{N_9}_y &= N_9 \times \cos\beta = \mathbf{\pnum{\Niy}} \\
+	\mathbf{N_{10}} &= -{N_9}_y =  \mathbf{\pnum{\Nj}} \\
+\end{align*}

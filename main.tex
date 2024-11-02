@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[a4paper, margin=.8in]{geometry}
+
+\usepackage{amssymb}
+\usepackage{varwidth}
+
+\usepackage{siunitx}
+
+\usepackage{fancyhdr}
+
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\def\magyarOptions{defaults=hu-min}
+\usepackage[magyar]{babel}
+
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\usepackage{amsmath}
+
+\usepackage{pdfpages}
+
+\usepackage{pgf}
+
+\usepackage{multicol}
+
+\usepackage{bm}
+
+\usepackage{tikz}
+\usetikzlibrary {arrows.meta, decorations.markings}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+
+	\fancyhead{}
+	\fancyhead[L]{Vári Gergő}
+	\fancyhead[C]{MQHJ0H}
+	\fancyhead[R]{\includegraphics[scale=.25]{signature}}
+	\setlength{\headheight}{16.5pt}
+
+	\fancyfoot{}
+	\fancyfoot[C]{\thepage}
+}
+
+\pagestyle{plain}
+
+\title{Statika 3. HF}
+\author{Vári Gergő}
+\date{\today}
+
+\pgfmathsetmacro{\a}{1.2}
+\pgfmathsetmacro{\b}{2}
+\pgfmathsetmacro{\c}{1.5}
+
+\pgfmathsetmacro{\Fa}{20}
+\pgfmathsetmacro{\Fb}{32}
+\pgfmathsetmacro{\Fc}{13}
+
+\pgfmathsetmacro{\By}{- \Fb * ( \c / \b )}
+\pgfmathsetmacro{\Cy}{\By}
+\pgfmathsetmacro{\Ay}{\Fa - \Cy}
+\pgfmathsetmacro{\Ax}{(-\Ay * 2* \a + \Fa * \a - \Fc * \c) / (\c)}
+\pgfmathsetmacro{\Cx}{-\Ax - \Fc}
+\pgfmathsetmacro{\Bx}{\Cx + \Fb}
+
+\pgfmathsetmacro{\Nay}{\Ay}
+\pgfmathsetmacro{\alfa}{atan(\c / \a)}
+\pgfmathsetmacro{\Na}{\Nay / sin(\alfa)}
+\pgfmathsetmacro{\Nax}{\Na * cos(\alfa)}
+\pgfmathsetmacro{\Nb}{-\Ax - \Nax}
+\pgfmathsetmacro{\Nc}{\Fa - \Nay}
+\pgfmathsetmacro{\Nd}{\Fc}
+\pgfmathsetmacro{\Nex}{\Nb - \Nd}
+\pgfmathsetmacro{\Ney}{-\Nc}
+\pgfmathsetmacro{\Ne}{sqrt((\Nex^2 + \Ney^2))}
+\pgfmathsetmacro{\Nf}{\Nax}
+\pgfmathsetmacro{\Ng}{0}
+\pgfmathsetmacro{\Nh}{\Bx}
+\pgfmathsetmacro{\Beta}{atan(\b / \c)}
+\pgfmathsetmacro{\Nix}{-\Fb}
+\pgfmathsetmacro{\Ni}{\Nix / sin(\Beta)}
+\pgfmathsetmacro{\Niy}{\Ni * cos(\Beta)}
+\pgfmathsetmacro{\Nj}{-\By}
+
+\newcommand{\pnum}[1]{%
+	\pgfmathprintnumber[fixed]{#1}
+}
+
+\begin{document}
+
+% \includepdf[pages={1}]{sthf3-final.pdf} %
+
+\maketitle
+
+\include{meretarany.tex}
+\include{reszek.tex}
+\include{csomopont.tex}
+\include{atmetszo.tex}
+
+\end{document}
