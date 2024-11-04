@@ -39,9 +39,9 @@
 \end{align*}
 
 \begin{align*}
-	&A_y = F_1 - C_y &= \pgfmathprintnumber[fixed]{\Ay} \\
-	&A_x = \frac{-A_y \times 2a+F_1 \times a - F_3 \times c}{c} &= \pgfmathprintnumber[fixed]{\Ax} \\
-	&C_x = -A_x - F_3 &= \pgfmathprintnumber[fixed]{\Cx}
+	&A_y = F_1 - C_y &= \pgfmathprintnumber[fixed]{\Ay} [\si{kN}] \\
+	&A_x = \frac{-A_y \times 2a+F_1 \times a - F_3 \times c}{c} &= \pgfmathprintnumber[fixed]{\Ax} [\si{kN}] \\
+	&C_x = -A_x - F_3 &= \pgfmathprintnumber[fixed]{\Cx} [\si{kN}]
 \end{align*}
 
 \subsubsection{}
@@ -63,9 +63,9 @@
 \end{align*}
 
 \begin{align*}
-	&B_y = -F_2 \frac{c}{b} &= \pgfmathprintnumber[fixed]{\By} \\
-	&C_y = B_y &= \pgfmathprintnumber[fixed]{\Cy} \\
-	&B_x = C_x + F_2 &= \pgfmathprintnumber[fixed]{\Bx} 
+	&B_y = -F_2 \frac{c}{b} &= \pgfmathprintnumber[fixed]{\By} [\si{kN}] \\
+	&C_y = B_y &= \pgfmathprintnumber[fixed]{\Cy} [\si{kN}] \\
+	&B_x = C_x + F_2 &= \pgfmathprintnumber[fixed]{\Bx} [\si{kN}]
 \end{align*}
 
 \end{multicols}
@@ -77,11 +77,11 @@
 		    A &= \begin{bmatrix}
 			    \pgfmathprintnumber[fixed]{\Ax} \\
 			    \pgfmathprintnumber[fixed]{\Ay}
-			  \end{bmatrix} \\
+		    \end{bmatrix} &[\si{kN}]\\
 		    B &= \begin{bmatrix}
 			    \pgfmathprintnumber[fixed]{\Bx} \\
 			    \pgfmathprintnumber[fixed]{\By}
-			  \end{bmatrix}
+		    \end{bmatrix} &[\si{kN}]
 		\end{aligned}
 	    $
 	}
