@@ -1,6 +1,62 @@
 
 \section{Átmetsző módszer}
 
+\subsection{SZTÁ}
+\begin{center}
+	\begin{tikzpicture}
+		\struccoordsys
+		\strucbend
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\strucframe
+		\strucforces
+		\strucrestrainforces
+		\draw[loosely dashed, orange, line width=.8mm] ($ (D) !0.5! (F) $)+(-.5,2) -- ($ ($ (E) !0.5! (C) $) + (-.5, -2)$);
+	\end{tikzpicture}
+\end{center}
+
+\subsection{Megmaradt rúderők}
+\begin{center}
+	\begin{tikzpicture}
+		\coordinate (A) at (0, \cs);
+		\coordinate (D) at (\as, \cs);
+		\coordinate (E) at (\as, 0);
+
+		\draw[line width = 0.1mm] (A)+(-1,0) -- (A);
+		\draw[line width = 0.1mm] (-1,0) -- (E);
+		\draw[line width = 0.1mm] (A)++(0,2) -- ++(0,-\cs-4);
+		\draw[line width = 0.1mm] (D)++(0,2) -- ++(0,-\cs-4);
+
+		\draw[line width = 0.2mm, arrows = {Latex-Latex}] (-1,0) -- ++(0,\cs) node[midway, left] {c};
+		\draw[line width = 0.2mm, arrows = {Latex-Latex}] (0,-1) -- ++(\as,0) node[midway, below] {a};
+
+		\pgfmathsetmacro{\framewidth}{.7mm}
+		\draw[line width = \framewidth, arrows = {-}] (A) -- (E) node[midway, anchor=north east] {1};
+		\draw[line width = \framewidth, arrows = {-}] (A) -- (D) node[midway, above] {2};
+		\draw[line width = \framewidth, arrows = {-}] (D) -- (E) node[midway, left] {3};
+
+		\foreach \point/\name in {A, D} {
+			\fill[white] (\point) circle[radius=2.5pt];
+			\draw[thick] (\point) circle[radius=2pt] node[anchor=south west] {\name};
+		}
+		\foreach \point/\name in {E} {
+			\fill[white] (\point) circle[radius=2.5pt];
+			\draw[thick] (\point) circle[radius=2pt] node[anchor=south west] {\name};
+		}
+
+		\draw[line width = .8mm, arrows = {-Stealth}, blue] (E) -- ++(0, -\Fasp) node[right] {$F_1$};
+		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (D) -- ++(3, 0) node[midway, above] {$N_4$};
+
+		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (D) -- ++(-\alfa:3) node[midway, left] {$N_5$};
+		\draw[black] (D) ++(2,0) arc[start angle=0, end angle=-\alfa, radius=2] node[midway, anchor=south east, font=\huge] {$\alpha$};
+
+		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (E) -- ++(3, 0) node[midway, above] {$N_6$};
+
+	\draw[line width = .8mm, arrows = {-Stealth}, green] (A)++(-2, 0) -- (A) node[midway, above] {$A_x$};
+	\draw[line width = .8mm, arrows = {-Stealth}, green] (A)++(0, -2) -- (A) node[midway, left] {$A_y$};
+	\end{tikzpicture}
+\end{center}
+
 \begin{align*}
 	&\sum{\vec{F}_x} := 0 = A_x + N_4 + {N_5}_x + N_6 \\
 	&\sum{\vec{F}_y} := 0 = A_y - {N_5}_y - F_1 \\

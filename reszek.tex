@@ -10,7 +10,7 @@
 	\begin{tikzpicture}
 		\strucframe
 		\strucforces
-		% TODO: \strucrestrainforces
+		\strucrestrainforces
 		\foreach \point in {C} {
 			\fill[thick, orange] (\point) circle[radius=4pt];
 		}
@@ -21,7 +21,17 @@
 \begin{multicols}{2}
 
 \subsubsection{}
-% \includegraphics{2i} 
+\begin{center}
+	\begin{tikzpicture}
+		\strucframepartone
+		\strucforcespartone
+		\strucrestrainforcespartone
+		\foreach \point in {C} {
+			\fill[thick, orange] (\point) circle[radius=4pt];
+		}
+		\struccutforcespartone
+	\end{tikzpicture}
+\end{center}
 \begin{align*}
 	&\sum{\vec{F}_x} := 0 = A_x + F_3 + C_x \\
 	&\sum{\vec{F}_y} := 0 = A_y - F_1 + C_y \\
@@ -35,7 +45,17 @@
 \end{align*}
 
 \subsubsection{}
-% \includegraphics{2ii} 
+\begin{center}
+	\begin{tikzpicture}
+		\strucframeparttwo
+		\strucforcesparttwo
+		\strucrestrainforcesparttwo
+		\foreach \point in {C} {
+			\fill[thick, orange] (\point) circle[radius=4pt];
+		}
+		\struccutforcesparttwo
+	\end{tikzpicture}
+\end{center}
 \begin{align*}
 	&\sum{\vec{F}_x} := 0 = B_x - F_2 - C_x \\
 	&\sum{\vec{F}_y} := 0 = B_y - C_y \\
