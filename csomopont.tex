@@ -6,6 +6,9 @@
 }
 
 \section{Csomóponti módszer}
+Ezen módszerben csomópontonként vizsgálom az ismeretlen \textcolor{cyan}{rúderőket}, amiket pozitívnak (tehát húzott rudakat) feltételezek: ezért kifele mutatónak ábrázolom őket.
+
+A használt szögeket triviális trigonometriai összefüggésekkel számoltam ki illetve innentől az egész dokumentumban a pipák azt jelentik hogy az eddig kiszámolt értékeink egyeznek az új értékekkel (ezzel is ellenőrizve számolásaimat).
 
 % A
 \begin{minipage}{0.4\textwidth}
@@ -13,8 +16,8 @@
 	\begin{tikzpicture}
 		\draw circle (1) node[midway, font=\huge] {A};
 		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (1, 0) -- ++(2, 0) node[midway, above] {$N_2$};
-		\draw[line width = .8mm, arrows = {-Stealth}, blue] (-3, 0) -- ++(2, 0) node[midway, above] {$A_x$};
-		\draw[line width = .8mm, arrows = {-Stealth}, blue] (0, -3) -- ++(0, 2) node[midway, left] {$A_y$};
+		\draw[line width = .8mm, arrows = {-Stealth}, green] (-3, 0) -- ++(2, 0) node[midway, above] {$A_x$};
+		\draw[line width = .8mm, arrows = {-Stealth}, green] (0, -3) -- ++(0, 2) node[midway, left] {$A_y$};
 		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (-\alfa:1) -- ++(-\alfa:2) node[midway, left] {$N_1$};
 		\draw[black] (2, 0) arc[start angle=0, end angle=-\alfa, radius=2] node[midway, anchor=south east, font=\huge] {$\alpha$};
 
@@ -44,8 +47,8 @@
 	\begin{tikzpicture}
 		\draw circle (1) node[midway, font=\huge] {B};
 		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (-1, 0) -- ++(-2, 0) node[midway, above] {$N_8$};
-		\draw[line width = .8mm, arrows = {-Stealth}, blue] (1, 0) -- ++(2, 0) node[midway, above] {$B_x$};
-		\draw[line width = .8mm, arrows = {-Stealth}, blue] (0, -3) -- ++(0, 2) node[midway, left] {$B_y$};
+		\draw[line width = .8mm, arrows = {-Stealth}, green] (1, 0) -- ++(2, 0) node[midway, above] {$B_x$};
+		\draw[line width = .8mm, arrows = {-Stealth}, green] (0, -3) -- ++(0, 2) node[midway, left] {$B_y$};
 		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (0, 1) -- ++(0, 2) node[midway, left] {$N_{10}$};
 
 	\end{tikzpicture}
@@ -109,8 +112,8 @@
 		&\sum{\vec{F}_y} := 0 = -N_3 - {N_5}_y 
 	\end{align*}
 	\begin{align*}
-		{N_5}_x &= N_2 - N_4 = &\mathbf{\pnum{\Nex}} [\si{kN}] \\
-		{N_5}_y &= -N_3 = &\mathbf{\pnum{\Ney}} [\si{kN}] \\
+		{N_5}_x &= N_2 - N_4 = &\pnum{\Nex} [\si{kN}] \\
+		{N_5}_y &= -N_3 = &\pnum{\Ney} [\si{kN}] \\
 		\mathbf{N_5} &= \sqrt{{{N_5}_x}^2 + {{N_5}_y}^2} = &\mathbf{\pnum{\Ne}} [\si{kN}] \\
 	\end{align*}
 \end{minipage}
@@ -174,7 +177,6 @@
 		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (180+\Beta:1) -- ++(180+\Beta:2) node[midway, anchor=south east] {$N_9$};
 		\draw (180+\Beta:2) arc[start angle=180+\Beta, end angle=270, radius=2] node[midway, above, font=\LARGE] {$\beta$};
 		\draw[line width = .8mm, arrows = {-Stealth}, cyan] (0, -1) -- ++(0, -2) node[midway, right] {$N_{10}$};
-		\draw (-1, 0) -- ++(-2, 0);
 		\draw[line width = .8mm, arrows = {-Stealth}, blue] (3, 0) -- ++(-2, 0) node[midway, below] {$F_2$};
 	\end{tikzpicture}
 \end{minipage}
@@ -187,9 +189,9 @@
 		$\tan \beta = \frac{b}{c} \Rightarrow \beta = \pnum{\Beta}$\textdegree
 	\end{center}
 	\begin{align*}
-		{N_9}_x &= -F_2 = &\mathbf{\pnum{\Nix}} [\si{kN}] \\
+		{N_9}_x &= -F_2 = &\pnum{\Nix} [\si{kN}] \\
 		\mathbf{N_9} &= \frac{{N_9}_x}{\sin\beta} = &\mathbf{\pnum{\Ni}} [\si{kN}] \\
-		{N_9}_y &= N_9 \times \cos\beta = &\mathbf{\pnum{\Niy}} [\si{kN}] \\
+		{N_9}_y &= N_9 \times \cos\beta = &\pnum{\Niy} [\si{kN}] \\
 		\mathbf{N_{10}} &= -{N_9}_y = &\mathbf{\pnum{\Nj}} [\si{kN}]
 	\end{align*}
 \end{minipage}

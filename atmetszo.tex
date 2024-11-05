@@ -1,5 +1,7 @@
 
 \section{Átmetsző módszer}
+Ezen módszerrel \textcolor{orange}{két külön részre vágással} vizsgálhatom a szerkezetet. Arra kell figyelni hogy \textbf{maximum 3 nem párhuzamos rudat} "metszhetünk át".
+
 
 \subsection{SZTÁ}
 \begin{center}
@@ -15,7 +17,11 @@
 	\end{tikzpicture}
 \end{center}
 
+\break
+
 \subsection{Megmaradt rúderők}
+Mivel a keresett rúderők már az egyik rész egyensúlyi egyenleteiből is kiszámolhatóak, elég azt lerajzolnunk.
+
 \begin{center}
 	\begin{tikzpicture}
 		\coordinate (A) at (0, \cs);
@@ -70,6 +76,8 @@
 
 \begin{align*}
 	{N_5}_x &= N_5 \times \cos\alpha = \pnum{\Nex} \checkmark \\
-	N_4 &= -A_x - {N_5}_x - N_6 = \pnum{\Nd} \checkmark \\
-	N_6 &= \frac{A_y \times a}{c} = \pnum{\Nf} \checkmark \\
+	\mathbf{N_4} &= -A_x - {N_5}_x - N_6 = \mathbf{\pnum{\Nd}} \checkmark \\
+	\mathbf{N_6} &= \frac{A_y \times a}{c} = \mathbf{\pnum{\Nf}} \checkmark \\
 \end{align*}
+
+Az értékeink egyeznek az előző feladattal, ezzel ellenőrizve munkámat.
